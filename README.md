@@ -1,2 +1,6 @@
-# 8values.github.io
-The 8values Political Quiz measures individuals' political values, including Equality, Nation, Liberty, Tradition, Markets, World, Authority, and Progress.
+# VistValues
+
+PRIVATE - COMMON
+ORDER - ANARCHY
+MARKETS - PLANNED
+NATION - WORLD
