@@ -134,4 +134,13 @@ questions = [
             "dipl": 0
         }
     },
+    {
+        "question": "I would prefer a democratically-elected idiot to an appointed genius.",
+        "effect": {
+            "prop": 0,
+            "mark": 0,
+            "govt": 10,
+            "dipl": 0
+        }
+    },
 ];
