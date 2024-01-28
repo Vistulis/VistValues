@@ -244,43 +244,43 @@ div.text-wrapper {
     color: #222222;
     display: inline-block;
 }
-div.equality {
+div.common {
     background-color: #f44336;
     text-align: left;
     border-right-style: solid;
 }
-div.wealth {
-    background-color: #00897b;
+div.private {
+    background-color: #ffb300;
     text-align: right;
     border-left-style: solid;
 }
-div.liberty {
-    background-color: #ffeb3b;
+div.planned {
+    background-color: #451717;
     text-align: left;
     border-right-style: solid;
 }
-div.authority {
-    background-color: #3f51b5;
+div.markets {
+    background-color: #ff730f;
     text-align: right;
     border-left-style: solid;
 }
-div.peace {
-    background-color: #03a9f4;
+div.order {
+    background-color: #322a75;
     text-align: right;
     border-left-style: solid;
 }
-div.might {
-    background-color: #ff9800;
+div.anarchy {
+    background-color: #ff29ea;
     text-align: left;
     border-right-style: solid;
 }
-div.progress {
-    background-color: #9c27b0;
+div.nation {
+    background-color: #573b28;
     text-align: right;
     border-left-style: solid;
 }
-div.tradition {
-    background-color: #8bc34a;
+div.world {
+    background-color: #1dadf0;
     text-align: left;
     border-right-style: solid;
 }
