@@ -111,7 +111,7 @@ stats"></a></div></noscript>
     }
 
     common  = getQueryVariable("p")
-    markets     = getQueryVariable("m")
+    markets     = 100 - getQueryVariable("m")
     order   = getQueryVariable("g") 
     world  = getQueryVariable("d")
     private    = (100 - common).toFixed(1)
