@@ -1,7 +1,7 @@
 <head>
 <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
 <link href='style.css' rel='stylesheet' type='text/css'>
-<title>8values Results</title>
+<title>VistValues Results</title>
 <link rel="icon" type="x-icon" href="icon.png">
 <link rel="shortcut icon" type="x-icon" href="icon.png">
 <meta charset="utf-8">
@@ -28,27 +28,27 @@
 </div>
 <h2>Production Axis: <span class="weight-300" id="production-label"></span></h2>
 <div class="axis">
-    <img id="img-might" src="value_images/planned.svg" height="128pt"/>
-    <div class="bar might" id="bar-might"><div class="text-wrapper" id="might"></div></div>
-    <div class="bar peace" id="bar-peace"><div class="text-wrapper" id="peace"></div></div>
-    <img id="img-peace" src="value_images/markets.svg" height="128pt"/>
+    <img id="img-planned" src="value_images/planned.svg" height="128pt"/>
+    <div class="bar planned" id="bar-planned"><div class="text-wrapper" id="planned"></div></div>
+    <div class="bar markets" id="bar-markets"><div class="text-wrapper" id="markets"></div></div>
+    <img id="img-markets" src="value_images/markets.svg" height="128pt"/>
 </div>
 <h2>Governance Axis: <span class="weight-300" id="governance-label"></span></h2>
 <div class="axis">
-    <img id="img-liberty" src="value_images/order.svg" height="128pt"/>
-    <div class="bar liberty" id="bar-liberty"><div class="text-wrapper" id="liberty"></div></div>
-    <div class="bar authority" id="bar-authority"><div class="text-wrapper" id="authority"></div></div>
-    <img id="img-authority" src="value_images/anarchy.svg" height="128pt"/>
+    <img id="img-order" src="value_images/order.svg" height="128pt"/>
+    <div class="bar order" id="bar-order"><div class="text-wrapper" id="order"></div></div>
+    <div class="bar anarchy" id="bar-anarchy"><div class="text-wrapper" id="anarchy"></div></div>
+    <img id="img-anarchy" src="value_images/anarchy.svg" height="128pt"/>
 </div>
 <h2>Diplomatic Axis: <span class="weight-300" id="diplomatic-label"></span></h2>
 <div class="axis">
-    <img id="img-tradition" src="value_images/nation.svg" height="128pt"/>
-    <div class="bar tradition" id="bar-tradition"><div class="text-wrapper" id="tradition"></div></div>
-    <div class="bar progress" id="bar-progress"><div class="text-wrapper" id="progress"></div></div>
-    <img id="img-progress" src="value_images/world.svg" height="128pt"/>
+    <img id="img-nation" src="value_images/nation.svg" height="128pt"/>
+    <div class="bar nation" id="bar-nation"><div class="text-wrapper" id="nation"></div></div>
+    <div class="bar world" id="bar-world"><div class="text-wrapper" id="world"></div></div>
+    <img id="img-world" src="value_images/world.svg" height="128pt"/>
 </div>
 <h2>Closest Match: <span class="weight-300" id="ideology-label"></span></h2>
-<p>Ideological matching is a work in progress, and is much less accurate than the values and axes.</p>
+<p>Ideological matching is a work in world, and is much less accurate than the values and axes.</p>
 <p>You can send these results by copying and pasting the URL at the top of the page or using the image below. Think your matched ideology was wrong? Want to help us calibrate the test? Send the results along with your political ideology to us at eightvalues@gmail.com, or send us any comments, questions, or criticism. </p>
 <hr/>
 <img src="" id="banner">
@@ -92,9 +92,9 @@ stats"></a></div></noscript>
     }
 
     econArray = ["Communist","Socialist","Social","Centrist","Market","Capitalist","Laissez-Faire"]
-    diplArray = ["Cosmopolitan","Internationalist","Peaceful","Balanced","Patriotic","Nationalist","Chauvinist"]
+    diplArray = ["Cosmopolitan","Internationalist","marketsful","Balanced","Patriotic","Nationalist","Chauvinist"]
     govtArray = ["Anarchist","Libertarian","Liberal","Moderate","Statist","Authoritarian","Totalitarian"]
-    sctyArray = ["Revolutionary","Very Progressive","Progressive","Neutral","Traditional","Very Traditional","Reactionary"]
+    sctyArray = ["Revolutionary","Very worldive","worldive","Neutral","national","Very national","Reactionary"]
 
     function setLabel(val,ary) {
         if (val > 100) { return "" } else
@@ -109,36 +109,36 @@ stats"></a></div></noscript>
     }
 
     common  = getQueryVariable("e")
-    peace     = getQueryVariable("d")
-    liberty   = getQueryVariable("g")
-    progress  = getQueryVariable("s")
+    markets     = getQueryVariable("d")
+    order   = getQueryVariable("g")
+    world  = getQueryVariable("s")
     private    = (100 - common).toFixed(1)
-    might     = (100 - peace   ).toFixed(1)
-    authority = (100 - liberty ).toFixed(1)
-    tradition = (100 - progress).toFixed(1)
+    planned     = (100 - markets   ).toFixed(1)
+    anarchy = (100 - order ).toFixed(1)
+    nation = (100 - world).toFixed(1)
 
     setBarValue("common", common)
     setBarValue("private", private)
-    setBarValue("peace", peace)
-    setBarValue("might", might)
-    setBarValue("liberty", liberty)
-    setBarValue("authority", authority)
-    setBarValue("progress", progress)
-    setBarValue("tradition", tradition)
+    setBarValue("markets", markets)
+    setBarValue("planned", planned)
+    setBarValue("order", order)
+    setBarValue("anarchy", anarchy)
+    setBarValue("world", world)
+    setBarValue("nation", nation)
 
     document.getElementById("economic-label").innerHTML = setLabel(common, econArray)
-    document.getElementById("production-label").innerHTML = setLabel(peace, diplArray)
-    document.getElementById("governance-label").innerHTML = setLabel(liberty, govtArray)
-    document.getElementById("diplomatic-label").innerHTML = setLabel(progress, sctyArray)
+    document.getElementById("production-label").innerHTML = setLabel(markets, diplArray)
+    document.getElementById("governance-label").innerHTML = setLabel(order, govtArray)
+    document.getElementById("diplomatic-label").innerHTML = setLabel(world, sctyArray)
 
     ideology = ""
     ideodist = Infinity
     for (var i = 0; i < ideologies.length; i++) {
         dist = 0
         dist += Math.pow(Math.abs(ideologies[i].stats.econ - common), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.govt - liberty), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.dipl - peace), 1.73856063)
-        dist += Math.pow(Math.abs(ideologies[i].stats.scty - progress), 1.73856063)
+        dist += Math.pow(Math.abs(ideologies[i].stats.govt - order), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.dipl - markets), 1.73856063)
+        dist += Math.pow(Math.abs(ideologies[i].stats.scty - world), 1.73856063)
         if (dist < ideodist) {
             ideology = ideologies[i].name
             ideodist = dist
@@ -166,17 +166,17 @@ stats"></a></div></noscript>
         ctx.drawImage(img, 20, 170, 100, 100);
         img = document.getElementById("img-private")
         ctx.drawImage(img, 680, 170, 100, 100)
-        img = document.getElementById("img-might")
+        img = document.getElementById("img-planned")
         ctx.drawImage(img, 20, 290, 100, 100)
-        img = document.getElementById("img-peace")
+        img = document.getElementById("img-markets")
         ctx.drawImage(img, 680, 290, 100, 100)
-        img = document.getElementById("img-liberty")
+        img = document.getElementById("img-order")
         ctx.drawImage(img, 20, 410, 100, 100)
-        img = document.getElementById("img-authority")
+        img = document.getElementById("img-anarchy")
         ctx.drawImage(img, 680, 410, 100, 100)
-        img = document.getElementById("img-tradition")
+        img = document.getElementById("img-nation")
         ctx.drawImage(img, 20, 530, 100, 100)
-        img = document.getElementById("img-progress")
+        img = document.getElementById("img-world")
         ctx.drawImage(img, 680, 530, 100, 100)
 
         ctx.fillStyle="#222222"
@@ -189,17 +189,17 @@ stats"></a></div></noscript>
         ctx.fillStyle="#00897b"
         ctx.fillRect(682-5.6*private, 184, 5.6*private-2, 72)
         ctx.fillStyle="#ff9800"
-        ctx.fillRect(120, 304, 5.6*might-2, 72)
+        ctx.fillRect(120, 304, 5.6*planned-2, 72)
         ctx.fillStyle="#03a9f4"
-        ctx.fillRect(682-5.6*peace, 304, 5.6*peace-2, 72)
+        ctx.fillRect(682-5.6*markets, 304, 5.6*markets-2, 72)
         ctx.fillStyle="#ffeb3b"
-        ctx.fillRect(120, 424, 5.6*liberty-2, 72)
+        ctx.fillRect(120, 424, 5.6*order-2, 72)
         ctx.fillStyle="#3f51b5"
-        ctx.fillRect(682-5.6*authority, 424, 5.6*authority-2, 72)
+        ctx.fillRect(682-5.6*anarchy, 424, 5.6*anarchy-2, 72)
         ctx.fillStyle="#8bc34a"
-        ctx.fillRect(120, 544, 5.6*tradition-2, 72)
+        ctx.fillRect(120, 544, 5.6*nation-2, 72)
         ctx.fillStyle="#9c27b0"
-        ctx.fillRect(682-5.6*progress, 544, 5.6*progress-2, 72)
+        ctx.fillRect(682-5.6*world, 544, 5.6*world-2, 72)
         ctx.fillStyle="#222222"
         ctx.font="700 80px Montserrat"
         ctx.textAlign="left"
@@ -209,14 +209,14 @@ stats"></a></div></noscript>
 
         ctx.textAlign="left"
         if (common  > 30) {ctx.fillText(common + "%", 130, 237.5)}
-        if (might     > 30) {ctx.fillText(might + "%", 130, 357.5)}
-        if (liberty   > 30) {ctx.fillText(liberty + "%", 130, 477.5)}
-        if (tradition > 30) {ctx.fillText(tradition + "%", 130, 597.5)}
+        if (planned     > 30) {ctx.fillText(planned + "%", 130, 357.5)}
+        if (order   > 30) {ctx.fillText(order + "%", 130, 477.5)}
+        if (nation > 30) {ctx.fillText(nation + "%", 130, 597.5)}
         ctx.textAlign="right"
         if (private    > 30) {ctx.fillText(private + "%", 670, 237.5)}
-        if (peace     > 30) {ctx.fillText(peace + "%", 670, 357.5)}
-        if (authority > 30) {ctx.fillText(authority + "%", 670, 477.5)}
-        if (progress  > 30) {ctx.fillText(progress + "%", 670, 597.5)}
+        if (markets     > 30) {ctx.fillText(markets + "%", 670, 357.5)}
+        if (anarchy > 30) {ctx.fillText(anarchy + "%", 670, 477.5)}
+        if (world  > 30) {ctx.fillText(world + "%", 670, 597.5)}
 
         ctx.font="300 30px Montserrat"
         ctx.fillText("8values.github.io", 780, 60)
