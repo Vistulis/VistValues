@@ -5,7 +5,9 @@ questions = [
             "prop": 0,
             "mark": 0,
             "govt": 0,
-            "dipl": -5
+            "dipl": -5,
+            "tech": 0,
+            "prog": 0
         }
     },
     {
@@ -14,7 +16,9 @@ questions = [
             "prop": 0,
             "mark": 0,
             "govt": 0,
-            "dipl": 5
+            "dipl": 5,
+            "tech": 0,
+            "prog": 0
         }
     },
     {
@@ -23,7 +27,9 @@ questions = [
             "prop": 0,
             "mark": 10,
             "govt": 0,
-            "dipl": 0
+            "dipl": 0,
+            "tech": 0,
+            "prog": 0
         }
     },
     {
@@ -32,7 +38,9 @@ questions = [
             "prop": 0,
             "mark": -10,
             "govt": 5,
-            "dipl": 0
+            "dipl": 0,
+            "tech": 0,
+            "prog": 0
         }
     },
     {
@@ -41,7 +49,9 @@ questions = [
             "prop": 0,
             "mark": 0,
             "govt": 5,
-            "dipl": 0
+            "dipl": 0,
+            "tech": 0,
+            "prog": 0
         }
     },
     {
@@ -50,7 +60,9 @@ questions = [
             "prop": 0,
             "mark": 0,
             "govt": -5,
-            "dipl": 0
+            "dipl": 0,
+            "tech": 0,
+            "prog": 0
         }
     },
     {
@@ -59,16 +71,20 @@ questions = [
             "prop": 0,
             "mark": 0,
             "govt": 0,
-            "dipl": -5
+            "dipl": -5,
+            "tech": 0,
+            "prog": 0
         }
     },
     {
-        "question": "We never know another nations true motives so we should assume they are our enemy.",
+        "question": "We never know another nation's true motives, so we should assume they are our enemy.",
         "effect": {
             "prop": 0,
             "mark": 0,
             "govt": 0,
-            "dipl": -10
+            "dipl": -10,
+            "tech": 0,
+            "prog": 0
         }
     },
     {
@@ -77,7 +93,9 @@ questions = [
             "prop": -5,
             "mark": 0,
             "govt": 0,
-            "dipl": 0
+            "dipl": 0,
+            "tech": 0,
+            "prog": 0
         }
     },
     {
@@ -86,25 +104,31 @@ questions = [
             "prop": 0,
             "mark": 0,
             "govt": 5,
-            "dipl": 0
+            "dipl": 0,
+            "tech": 0,
+            "prog": 0
         }
     },
     {
-        "question": "Global cooperation is needed to solve global problems (e.g. climate change).",
+        "question": "Global cooperation is needed to solve global problems (e.g., climate change).",
         "effect": {
             "prop": 0,
             "mark": 0,
             "govt": 0,
-            "dipl": 5
+            "dipl": 5,
+            "tech": 0,
+            "prog": 0
         }
     },
     {
-        "question": "I believe the death penalty should be legalised.",
+        "question": "I believe the death penalty should be legalized.",
         "effect": {
             "prop": 0,
             "mark": 0,
             "govt": -5,
-            "dipl": 0
+            "dipl": 0,
+            "tech": 0,
+            "prog": 0
         }
     },
     {
@@ -113,7 +137,9 @@ questions = [
             "prop": 0,
             "mark": 0,
             "govt": -5,
-            "dipl": 0
+            "dipl": 0,
+            "tech": 0,
+            "prog": 0
         }
     },
     {
@@ -122,7 +148,9 @@ questions = [
             "prop": 0,
             "mark": 0,
             "govt": 0,
-            "dipl": -10
+            "dipl": -10,
+            "tech": 0,
+            "prog": 0
         }
     },
     {
@@ -131,7 +159,9 @@ questions = [
             "prop": 0,
             "mark": 0,
             "govt": -10,
-            "dipl": 0
+            "dipl": 0,
+            "tech": 0,
+            "prog": 0
         }
     },
     {
@@ -140,7 +170,9 @@ questions = [
             "prop": 0,
             "mark": 0,
             "govt": 10,
-            "dipl": 0
+            "dipl": 0,
+            "tech": 0,
+            "prog": 0
         }
     },
-];
+]
