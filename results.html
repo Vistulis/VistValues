@@ -118,8 +118,8 @@ stats"></a></div></noscript>
         	{return "Error"}
     }
 
-    common  = transformNumber(getQueryVariable("p"))
-    markets     = 100 - getQueryVariable("m")
+    common  = transformNumber(getQueryVariable("p")) <!-- Some are reversed so need to be put through transformNumber --!>
+    markets     = transformNumber(getQueryVariable("m"))
     order   = getQueryVariable("g") 
     world  = getQueryVariable("d")
     private    = (100 - common).toFixed(1)
