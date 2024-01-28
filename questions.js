@@ -89,4 +89,49 @@ questions = [
             "dipl": 0
         }
     },
+    {
+        "question": "Global cooperation is needed to solve global problems (e.g. climate change).",
+        "effect": {
+            "prop": 0,
+            "mark": 0,
+            "govt": 0,
+            "dipl": 5
+        }
+    },
+    {
+        "question": "I believe the death penalty should be legalised.",
+        "effect": {
+            "prop": 0,
+            "mark": 0,
+            "govt": -5,
+            "dipl": 0
+        }
+    },
+    {
+        "question": "It is acceptable for enemies of the state to be killed, just like how we kill enemies in war.",
+        "effect": {
+            "prop": 0,
+            "mark": 0,
+            "govt": -5,
+            "dipl": 0
+        }
+    },
+    {
+        "question": "War is always the answer.",
+        "effect": {
+            "prop": 0,
+            "mark": 0,
+            "govt": 0,
+            "dipl": -10
+        }
+    },
+    {
+        "question": "1984 seems like an ideal to me.",
+        "effect": {
+            "prop": 0,
+            "mark": 0,
+            "govt": -10,
+            "dipl": 0
+        }
+    },
 ];
