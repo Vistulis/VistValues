@@ -64,13 +64,13 @@
     var qn = 0; // Question number
     init_question();
     for (var i = 0; i < questions.length; i++) {
-        max_prop += Math.abs(questions[i].effect.prop);
-        max_mark += Math.abs(questions[i].effect.mark);
-        max_govt += Math.abs(questions[i].effect.govt);
-        max_dipl += Math.abs(questions[i].effect.dipl);
-        max_devi += Math.abs(questions[i].effect.devi || 0); // Default to 0 if devi is not defined
-        max_prog += Math.abs(questions[i].effect.prog || 0); // Default to 0 if prog is not defined
-        max_tech += Math.abs(questions[i].effect.tech || 0); // Default to 0 if tech is not defined
+        max_prop += Math.abs(questions[i].effect.prop || 0);
+        max_mark += Math.abs(questions[i].effect.mark || 0);
+        max_govt += Math.abs(questions[i].effect.govt || 0);
+        max_dipl += Math.abs(questions[i].effect.dipl || 0);
+        max_devi += Math.abs(questions[i].effect.devi || 0);
+        max_prog += Math.abs(questions[i].effect.prog || 0); 
+        max_tech += Math.abs(questions[i].effect.tech || 0); 
     }
 
     function init_question() {
@@ -86,13 +86,13 @@
     }
 
     function next_question(mult) {
-        prop_array[qn] = mult * questions[qn].effect.prop;
-        mark_array[qn] = mult * questions[qn].effect.mark;
-        govt_array[qn] = mult * questions[qn].effect.govt;
-        dipl_array[qn] = mult * questions[qn].effect.dipl;
-        devi_array[qn] = mult * (questions[qn].effect.devi || 0); // Default to 0 if devi is not defined
-        prog_array[qn] = mult * (questions[qn].effect.prog || 0); // Default to 0 if prog is not defined
-        tech_array[qn] = mult * (questions[qn].effect.tech || 0); // Default to 0 if tech is not defined
+        prop_array[qn] = mult * (questions[qn].effect.prop || 0);
+        mark_array[qn] = mult * (questions[qn].effect.mark || 0);
+        govt_array[qn] = mult * (questions[qn].effect.govt || 0); 
+        dipl_array[qn] = mult * (questions[qn].effect.dipl || 0);
+        devi_array[qn] = mult * (questions[qn].effect.devi || 0);
+        prog_array[qn] = mult * (questions[qn].effect.prog || 0);
+        tech_array[qn] = mult * (questions[qn].effect.tech || 0);
         qn++;
         if (qn < questions.length) {
             init_question();
