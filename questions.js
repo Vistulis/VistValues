@@ -7,7 +7,8 @@ questions = [
             "govt": 0,
             "dipl": -5,
             "tech": 0,
-            "prog": 0
+            "prog": 0,
+            "devi": 0
         }
     },
     {
@@ -18,7 +19,8 @@ questions = [
             "govt": 0,
             "dipl": 5,
             "tech": 0,
-            "prog": 0
+            "prog": 0,
+            "devi": 0
         }
     },
     {
@@ -29,7 +31,8 @@ questions = [
             "govt": 0,
             "dipl": 0,
             "tech": 0,
-            "prog": 0
+            "prog": 0,
+            "devi": 0
         }
     },
     {
@@ -40,7 +43,8 @@ questions = [
             "govt": 5,
             "dipl": 0,
             "tech": 0,
-            "prog": 0
+            "prog": 0,
+            "devi": 0
         }
     },
     {
@@ -51,7 +55,8 @@ questions = [
             "govt": 5,
             "dipl": 0,
             "tech": 0,
-            "prog": 0
+            "prog": 0,
+            "devi": 0
         }
     },
     {
@@ -62,7 +67,8 @@ questions = [
             "govt": -5,
             "dipl": 0,
             "tech": 0,
-            "prog": 0
+            "prog": 0,
+            "devi": 0
         }
     },
     {
@@ -73,7 +79,8 @@ questions = [
             "govt": 0,
             "dipl": -5,
             "tech": 0,
-            "prog": 0
+            "prog": 0,
+            "devi": 0
         }
     },
     {
@@ -84,7 +91,8 @@ questions = [
             "govt": 0,
             "dipl": -10,
             "tech": 0,
-            "prog": 0
+            "prog": 0,
+            "devi": 0
         }
     },
     {
@@ -95,7 +103,8 @@ questions = [
             "govt": 0,
             "dipl": 0,
             "tech": 0,
-            "prog": 0
+            "prog": 0,
+            "devi": 0
         }
     },
     {
@@ -106,7 +115,8 @@ questions = [
             "govt": 5,
             "dipl": 0,
             "tech": 0,
-            "prog": 0
+            "prog": 0,
+            "devi": 0
         }
     },
     {
@@ -117,7 +127,8 @@ questions = [
             "govt": 0,
             "dipl": 5,
             "tech": 0,
-            "prog": 0
+            "prog": 0,
+            "devi": 0
         }
     },
     {
@@ -128,7 +139,8 @@ questions = [
             "govt": -5,
             "dipl": 0,
             "tech": 0,
-            "prog": 0
+            "prog": 0,
+            "devi": 0
         }
     },
     {
@@ -139,7 +151,8 @@ questions = [
             "govt": -5,
             "dipl": 0,
             "tech": 0,
-            "prog": 0
+            "prog": 0,
+            "devi": 0
         }
     },
     {
@@ -150,7 +163,8 @@ questions = [
             "govt": 0,
             "dipl": -10,
             "tech": 0,
-            "prog": 0
+            "prog": 0,
+            "devi": 0
         }
     },
     {
@@ -161,7 +175,8 @@ questions = [
             "govt": -10,
             "dipl": 0,
             "tech": 0,
-            "prog": 0
+            "prog": 0,
+            "devi": 0
         }
     },
     {
@@ -172,7 +187,8 @@ questions = [
             "govt": 10,
             "dipl": 0,
             "tech": 0,
-            "prog": 0
+            "prog": 0,
+            "devi": 0
         }
     },
 ]
