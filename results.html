@@ -91,6 +91,16 @@ stats"></a></div></noscript>
         }
     }
 
+	function transformNumber(input) {
+	    if (input === 100) {
+	        return 0;
+	    } else if (input === 0) {
+	        return 100;
+	    } else {
+	        return 100 - input;
+	    }
+	}
+
     ownershipArray = ["Communal", "Anti-Rent", "Georgist", "Centrist", "Reformist", "Private", "Stand-Your-Ground"]
     marketsArray = ["Marxian", "Tight", "Restricted", "Regulated", "Semi-Regulated", "Free Market", "Laissez-Faire"]
     govtArray = ["Anarchist", "Libertarian", "Liberal", "Moderate", "Statist", "Authoritarian", "Totalitarian"]
@@ -108,8 +118,8 @@ stats"></a></div></noscript>
         	{return "Error"}
     }
 
-    common  = getQueryVariable("p")
-    markets     = getQueryVariable("m")
+    common  = transformNumber(getQueryVariable("p"))
+    markets     = 100 - getQueryVariable("m")
     order   = getQueryVariable("g") 
     world  = getQueryVariable("d")
     private    = (100 - common).toFixed(1)
