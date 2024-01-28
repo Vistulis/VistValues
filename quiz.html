@@ -1,22 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
-<link href='style.css' rel='stylesheet' type='text/css'>
-<title>8values Quiz</title>
-<link rel="icon" type="x-icon" href="icon.png">
-<link rel="shortcut icon" type="x-icon" href="icon.png">
-<meta charset="utf-8">
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-6511426299019766",
-    enable_page_level_ads: true
-  });
-</script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
+    <link href='style.css' rel='stylesheet' type='text/css'>
+    <title>8values Quiz</title>
+    <link rel="icon" type="x-icon" href="icon.png">
+    <link rel="shortcut icon" type="x-icon" href="icon.png">
+    <meta charset="utf-8">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-6511426299019766",
+            enable_page_level_ads: true
+        });
+    </script>
 </head>
 <body>
-<script type="application/javascript"
-        src="questions.js">
-</script>
+<script type="application/javascript" src="questions.js"></script>
 <h1>8values</h1>
 <hr>
 <h2 style="text-align:center;" id="question-number">Loading...</h2>
@@ -33,55 +33,66 @@
 
 <!-- Website visit statistics - no personal information is collected! -->
 <script type="text/javascript">
-var sc_project=11325211;
-var sc_invisible=1;
-var sc_security="fd9f0659";
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
+    var sc_project=11325211;
+    var sc_invisible=1;
+    var sc_security="fd9f0659";
+    var scJsHost = (("https:" == document.location.protocol) ?
+        "https://secure." : "http://www.");
+    document.write("<sc"+"ript type='text/javascript' src='" +
+        scJsHost+
+        "statcounter.com/counter/counter.js'></"+"script>");
 </script>
-<noscript><div class="statcounter"><a title="web stats"
-href="http://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="//c.statcounter.com/11325211/0/fd9f0659/1/" alt="web
-stats"></a></div></noscript>
+<noscript>
+    <div class="statcounter">
+        <a title="web stats" href="http://statcounter.com/" target="_blank">
+            <img class="statcounter" src="//c.statcounter.com/11325211/0/fd9f0659/1/" alt="web stats">
+        </a>
+    </div>
+</noscript>
 
 <!-- JavaScript for the test itself -->
 <script>
-    var max_prop, max_mark, max_govt, max_dipl; // Max possible scores
-    max_prop = max_mark = max_govt = max_dipl = 0;
+    var max_prop, max_mark, max_govt, max_dipl, max_devi, max_prog, max_tech;
+    max_prop = max_mark = max_govt = max_dipl = max_devi = max_prog = max_tech = 0;
     let prop_array = new Array(questions.length);
     let mark_array = new Array(questions.length);
     let govt_array = new Array(questions.length);
     let dipl_array = new Array(questions.length);
+    let devi_array = new Array(questions.length);
+    let prog_array = new Array(questions.length);
+    let tech_array = new Array(questions.length);
     var qn = 0; // Question number
     init_question();
     for (var i = 0; i < questions.length; i++) {
-        max_prop += Math.abs(questions[i].effect.prop)
-        max_mark += Math.abs(questions[i].effect.mark)
-        max_govt += Math.abs(questions[i].effect.govt)
-        max_dipl += Math.abs(questions[i].effect.dipl)
+        max_prop += Math.abs(questions[i].effect.prop);
+        max_mark += Math.abs(questions[i].effect.mark);
+        max_govt += Math.abs(questions[i].effect.govt);
+        max_dipl += Math.abs(questions[i].effect.dipl);
+        max_devi += Math.abs(questions[i].effect.devi || 0); // Default to 0 if devi is not defined
+        max_prog += Math.abs(questions[i].effect.prog || 0); // Default to 0 if prog is not defined
+        max_tech += Math.abs(questions[i].effect.tech || 0); // Default to 0 if tech is not defined
     }
+
     function init_question() {
         document.getElementById("question-text").innerHTML = questions[qn].question;
         document.getElementById("question-number").innerHTML = "Question " + (qn + 1) + " of " + (questions.length);
-        if (qn == 0) {
+        if (qn === 0) {
             document.getElementById("back_button").style.display = 'none';
             document.getElementById("back_button_off").style.display = 'block';
         } else {
             document.getElementById("back_button").style.display = 'block';
             document.getElementById("back_button_off").style.display = 'none';
         }
-
     }
 
     function next_question(mult) {
-        prop_array[qn] = mult*questions[qn].effect.prop
-        mark_array[qn] = mult*questions[qn].effect.mark
-        govt_array[qn] = mult*questions[qn].effect.govt
-        mark_array[qn] = mult*questions[qn].effect.dipl
+        prop_array[qn] = mult * questions[qn].effect.prop;
+        mark_array[qn] = mult * questions[qn].effect.mark;
+        govt_array[qn] = mult * questions[qn].effect.govt;
+        dipl_array[qn] = mult * questions[qn].effect.dipl;
+        devi_array[qn] = mult * (questions[qn].effect.devi || 0); // Default to 0 if devi is not defined
+        prog_array[qn] = mult * (questions[qn].effect.prog || 0); // Default to 0 if prog is not defined
+        tech_array[qn] = mult * (questions[qn].effect.tech || 0); // Default to 0 if tech is not defined
         qn++;
         if (qn < questions.length) {
             init_question();
@@ -91,27 +102,28 @@ stats"></a></div></noscript>
     }
 
     function prev_question() {
-        if (qn == 0) {
+        if (qn === 0) {
             return;
         }
         qn--;
         init_question();
     }
 
-    function calc_score(score,max) {
-        return (100*(max+score)/(2*max)).toFixed(1)
+    function calc_score(score, max) {
+        return (100 * (max + score) / (2 * max)).toFixed(1);
     }
 
     function results() {
-        let final_prop = prop_array.reduce((a, b) => a + b, 0)
-        let final_mark = mark_array.reduce((a, b) => a + b, 0)
-        let final_govt = govt_array.reduce((a, b) => a + b, 0)
-        let final_dipl = dipl_array.reduce((a, b) => a + b, 0)
-        location.href = `results.html`
-            + `?p=${calc_score(final_prop,max_prop)}`
-            + `&m=${calc_score(final_mark,max_mark)}`
-            + `&g=${calc_score(final_govt,max_govt)}`
-            + `&d=${calc_score(final_dipl,max_dipl)}`
+        let final_prop = prop_array.reduce((a, b) => a + b, 0);
+        let final_mark = mark_array.reduce((a, b) => a + b, 0);
+        let final_govt = govt_array.reduce((a, b) => a + b, 0);
+        let final_dipl = dipl_array.reduce((a, b) => a + b, 0);
+        let final_devi = devi_array.reduce((a, b) => a + b, 0);
+        let final_prog = prog_array.reduce((a, b) => a + b, 0);
+        let final_tech = tech_array.reduce((a, b) => a + b, 0);
+
+        location.href = `results.html?p=${calc_score(final_prop, max_prop)}&m=${calc_score(final_mark, max_mark)}&g=${calc_score(final_govt, max_govt)}&d=${calc_score(final_dipl, max_dipl)}&devi=${calc_score(final_devi, max_devi)}&prog=${calc_score(final_prog, max_prog)}&tech=${calc_score(final_tech, max_tech)}`;
     }
 </script>
 </body>
+</html>
