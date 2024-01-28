@@ -115,6 +115,33 @@ div.axis_name {
 .spacer {
     display: flex;
 }
+
+/* Existing quadcolumn styles */
+img.quadcolumn {
+    width: 23.75%;
+    transition: transform .3s;
+}
+img.quadcolumn:hover {
+    transform: scale(1.05);
+}
+
+div.quadcolumn {
+    width: 23.75%;
+}
+
+/* New septacolumn styles */
+img.septacolumn {
+    width: 16.6666667%; /* 100% / 6 columns */
+    transition: transform .3s;
+}
+img.septacolumn:hover {
+    transform: scale(1.05);
+}
+
+div.septacolumn {
+    width: 16.6666667%; /* 100% / 6 columns */
+}
+
 .spacer > div{
     margin-top: 10px;
     display: inline-block;
