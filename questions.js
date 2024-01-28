@@ -59,7 +59,34 @@ questions = [
             "prop": 0,
             "mark": 0,
             "govt": 0,
+            "dipl": -5
+        }
+    },
+    {
+        "question": "We never know another nations true motives so we should assume they are our enemy.",
+        "effect": {
+            "prop": 0,
+            "mark": 0,
+            "govt": 0,
             "dipl": -10
+        }
+    },
+    {
+        "question": "Private property is oppressive.",
+        "effect": {
+            "prop": -5,
+            "mark": 0,
+            "govt": 0,
+            "dipl": 0
+        }
+    },
+    {
+        "question": "We must overthrow the state to liberate all people.",
+        "effect": {
+            "prop": 0,
+            "mark": 0,
+            "govt": 5,
+            "dipl": 0
         }
     },
 ];
