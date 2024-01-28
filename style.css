@@ -94,7 +94,7 @@ div.center {
     border-radius: 8pt;
     padding: 6pt;
     color: white;
-    width: 50%;
+    width: 80%;
     min-width: 488pt;
     text-align: center;
     text-decoration: none;
@@ -314,7 +314,7 @@ div.bar {
     border-right-width: 1px;
     border-top-style: solid;
     border-bottom-style: solid;
-    border-color: #F8F8F2;
+    border-color: #222222;
     background-color: #2C2C2C;
     display: block;
     width: 50%;
