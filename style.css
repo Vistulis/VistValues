@@ -144,7 +144,7 @@ div.quadcolumn {
 
 /* New septacolumn styles */
 img.septacolumn {
-    width: calc(100% / 8.5);
+    width: calc(100% / 8);
     transition: transform .3s;
 }
 
@@ -153,7 +153,7 @@ img.septacolumn:hover {
 }
 
 div.septacolumn {
-    width: calc(100% / 8.5);
+    width: calc(100% / 8);
 }
 
 .spacer > div {
