@@ -19,7 +19,7 @@
 
 <h1>Results</h1>
 
-<h2>Ownership Axis: <span class="weight-300" id="economic-label"></span></h2>
+<h2>Ownership Axis: <span class="weight-300" id="ownership-label"></span></h2>
 <div class="axis">
     <img id="img-common" src="value_images/common.svg" height="128pt"/>
     <div class="bar common" id="bar-common"><div class="text-wrapper" id="common"></div></div>
@@ -91,13 +91,15 @@ stats"></a></div></noscript>
         }
     }
 
-    econArray = ["Communist","Socialist","Social","Centrist","Market","Capitalist","Laissez-Faire"]
-    diplArray = ["Cosmopolitan","Internationalist","marketsful","Balanced","Patriotic","Nationalist","Chauvinist"]
-    govtArray = ["Anarchist","Libertarian","Liberal","Moderate","Statist","Authoritarian","Totalitarian"]
-    sctyArray = ["Revolutionary","Very worldive","worldive","Neutral","national","Very national","Reactionary"]
+<!-- ary[7] == 100%, ary[8] == 0% -->
+    ownershipArray = ["Communal","Anti-Rent","Georgist","Centrist","Reformist","Private","Stand-Your-Ground", "Absolute", "Collective"]
+    marketsArray = ["Marxian","Freed","marketsful","Regulated","Patriotic","Free Market","Lassez-Faire", "Darwinist", "Anti-Market"]
+    govtArray = ["Anarchist","Libertarian","Liberal","Moderate","Statist","Authoritarian","Totalitarian", "Orwellian", "Chaotic"]
+    diploArray = ["Chauvinist", "Nationalist", "Patriotic", "Balanced", "marketsful", "Internationalist", "Cosmopolitan", "World Federalist", "Supremacist"]
 
     function setLabel(val,ary) {
         if (val > 100) { return "" } else
+	if (val == 100) { return ary[7] } else
         if (val > 90) { return ary[0] } else
         if (val > 75) { return ary[1] } else
         if (val > 60) { return ary[2] } else
@@ -105,13 +107,13 @@ stats"></a></div></noscript>
         if (val >= 25) { return ary[4] } else
         if (val >= 10) { return ary[5] } else
         if (val >= 0) { return ary[6] } else
-        	{return ""}
+        	{return ary[8]}
     }
 
-    common  = getQueryVariable("e")
-    markets     = getQueryVariable("d")
-    order   = getQueryVariable("g")
-    world  = getQueryVariable("s")
+    common  = getQueryVariable("p")
+    markets     = getQueryVariable("m")
+    order   = getQueryVariable("g") 
+    world  = getQueryVariable("d")
     private    = (100 - common).toFixed(1)
     planned     = (100 - markets   ).toFixed(1)
     anarchy = (100 - order ).toFixed(1)
@@ -126,19 +128,19 @@ stats"></a></div></noscript>
     setBarValue("world", world)
     setBarValue("nation", nation)
 
-    document.getElementById("economic-label").innerHTML = setLabel(common, econArray)
-    document.getElementById("production-label").innerHTML = setLabel(markets, diplArray)
+    document.getElementById("ownership-label").innerHTML = setLabel(common, ownershipArray)
+    document.getElementById("production-label").innerHTML = setLabel(markets, marketsArray)
     document.getElementById("governance-label").innerHTML = setLabel(order, govtArray)
-    document.getElementById("diplomatic-label").innerHTML = setLabel(world, sctyArray)
+    document.getElementById("diplomatic-label").innerHTML = setLabel(world, diploArray)
 
     ideology = ""
     ideodist = Infinity
     for (var i = 0; i < ideologies.length; i++) {
         dist = 0
-        dist += Math.pow(Math.abs(ideologies[i].stats.econ - common), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.prop - common), 2)
         dist += Math.pow(Math.abs(ideologies[i].stats.govt - order), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.dipl - markets), 1.73856063)
-        dist += Math.pow(Math.abs(ideologies[i].stats.scty - world), 1.73856063)
+        dist += Math.pow(Math.abs(ideologies[i].stats.mark - markets), 1.73856063)
+        dist += Math.pow(Math.abs(ideologies[i].stats.diplo - world), 1.73856063)
         if (dist < ideodist) {
             ideology = ideologies[i].name
             ideodist = dist
